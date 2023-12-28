@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/linearRoot"
+    tools:context=".More.Leave_feedback.LeaveFeedbackFragment">
+
+    <androidx.appcompat.widget.Toolbar
+
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/carbon_arrow_left" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingTop="12dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="24dp"
+
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:lineHeight="28dp"
+                android:text="Ваш отзыв важен для нас!"
+                android:textAlignment="center"
+                android:textColor="@color/text1"
+                android:textFontWeight="500"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/illustration_review" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/roboto"
+                android:lineHeight="24dp"
+                android:text="Оцените по пятибалльной шкале качество нашей работы, где1 - это ''Очень плохо''
+5 - ''Отлично, всем на 100% доволен''"
+                android:textColor="@color/text1"
+                android:textFontWeight="400"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/ratingbar_selector"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <include
+
+                    android:id="@+id/textErrorOne"
+                    layout="@layout/error_text"
+                    android:layout_marginBottom="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:lineHeight="24dp"
+                    android:text="Работа специалиста в целом"
+                    android:textColor="@color/text1"
+                    android:textFontWeight="400"
+                    android:textSize="16sp" />
+
+                <RatingBar
+
+                    android:id="@+id/overal_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:numStars="5"
+                    android:stepSize="1"
+                    android:theme="@style/MyRatingBar" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/ratingbar_selector"
+                android:orientation="vertical"
+                android:padding="16dp">
+                <include
+                    android:id="@+id/textErrorTwo"
+                    layout="@layout/error_text"
+                    android:layout_marginBottom="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:lineHeight="24dp"
+                    android:text="Насколько понятны обьяснения"
+                    android:textColor="@color/text1"
+                    android:textFontWeight="400"
+                    android:textSize="16sp" />
+
+                <RatingBar
+                    android:id="@+id/professionalism_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:numStars="5"
+                    android:stepSize="1"
+                    android:theme="@style/MyRatingBar" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/ratingbar_selector"
+                android:orientation="vertical"
+                android:padding="16dp">
+                <include
+                    android:id="@+id/textErrorThree"
+                    layout="@layout/error_text"
+                    android:layout_marginBottom="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:lineHeight="24dp"
+                    android:text="Вежливость общения специалиста"
+                    android:textColor="@color/text1"
+                    android:textFontWeight="400"
+                    android:textSize="16sp" />
+
+                <RatingBar
+                    android:id="@+id/courtesy_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:numStars="5"
+                    android:stepSize="1"
+                    android:theme="@style/MyRatingBar" />
+            </LinearLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/YTextInputLayout"
+                android:id="@+id/Employee_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="112dp"
+                android:layout_marginTop="24dp"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/employee_feedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/BG2"
+                    android:gravity="start"
+                    android:hint="Мнение о сотруднике"
+                    android:maxLines="2"
+
+                    android:textCursorDrawable="@drawable/color_cursor" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/YTextInputLayout"
+                android:layout_width="match_parent"
+                android:id="@+id/Company_feedback"
+                android:layout_height="112dp"
+                app:errorEnabled="true"
+                android:layout_marginTop="24dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/company_feedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/BG2"
+                    android:gravity="start"
+                    android:hint="Мнение о компании"
+                    android:maxLines="2"
+                    android:textCursorDrawable="@drawable/color_cursor" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/YTextInputLayout"
+                android:layout_width="match_parent"
+                android:id="@+id/Help_feedback"
+                android:layout_height="112dp"
+                app:errorEnabled="true"
+                android:layout_marginTop="24dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/help_feedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/BG2"
+                    android:gravity="start"
+                    android:hint="Чем помогает работа с компанией"
+                    android:maxLines="2"
+                    android:textCursorDrawable="@drawable/color_cursor" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/YTextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="112dp"
+                android:layout_marginTop="24dp"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/improve_feedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/BG2"
+                    android:gravity="start"
+                    android:hint="Чего вам не хватает в работе с нами"
+
+                    android:maxLines="2"
+                    android:textCursorDrawable="@drawable/color_cursor" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="@color/text1"
+                android:fontFamily="@font/roboto"
+                android:lineHeight="20dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:text="Отправить отзыв"
+                android:textAllCaps="false"
+                android:textFontWeight="500"
+
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

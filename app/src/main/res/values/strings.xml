@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">AntiKolektor</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="entry_text">Введите номер телефона, чтобы войти или зарегистрироваться</string>
+    <string name="politika">Авторизируясь в приложении вы принимаете условия политики конфидециальности</string>
+    <string name="entry_phone_text">Мы отправили СМС с кодом на номер</string>
+    <string name="zaglushka">Пароль одинаковый с личным кабинетом какой-тот теткст</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="feelings">
+        <item>Прочее</item>
+        <item>Сотрудники</item>
+        <item>Партнеры</item>
+        <item>Банк</item>
+        <item>Коллектор</item>
+        <item>Приставы</item>
+    </string-array>
+</resources>

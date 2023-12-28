@@ -1,0 +1,128 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id "androidx.navigation.safeargs.kotlin"
+    id 'com.google.gms.google-services'
+    id 'kotlin-kapt'
+
+
+}
+
+android {
+    namespace 'com.example.antikolektor'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.antikolektor"
+        minSdk 23
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding = true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+
+    // pinview
+    implementation 'io.github.chaosleung:pinview:1.4.4'
+    //stories
+//    implementation 'com.github.MrMak21:Android-Stories:1.1.4'
+
+    implementation 'androidx.recyclerview:recyclerview:1.2.0-beta02'
+
+    // retrofit
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:2.3.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation "io.reactivex.rxjava2:rxjava:2.2.19"
+
+    implementation "com.squareup.okhttp3:okhttp:4.9.1"
+    implementation "com.squareup.okhttp3:logging-interceptor:4.8.0"
+
+    //picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    //viewModel
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
+    //courutiner
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+//    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.6.0-beta01")
+
+    //swipe
+    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
+    // Import the Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:31.0.3')
+
+    
+    // When using the BoM, don't specify versions in Firebase dependencies
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+
+    //moshi
+    implementation "com.squareup.moshi:moshi-kotlin:1.13.0"
+    implementation "com.squareup.moshi:moshi:1.13.0"
+    kapt "com.squareup.moshi:moshi-kotlin-codegen:1.13.0"
+    implementation "com.squareup.retrofit2:converter-moshi:2.9.0"
+
+
+//badge image view
+//    implementation 'com.nex3z:notification-badge:1.0.2'
+
+    //room component
+    implementation "androidx.room:room-runtime:2.4.3"
+    implementation "androidx.room:room-ktx:2.4.3"
+    kapt "androidx.room:room-compiler:2.4.3"
+    androidTestImplementation "androidx.room:room-testing:2.4.3"
+
+    //dataSore
+    implementation "androidx.datastore:datastore-preferences:1.0.0-alpha04"
+
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+
+    //tinkoff
+    implementation ("ru.tinkoff.acquiring:ui:2.10.1")
+    implementation ("ru.tinkoff.acquiring:threeds-sdk:2.10.1")
+    implementation ("ru.tinkoff.acquiring:threeds-wrapper:2.10.1")
+
+    implementation "com.github.skydoves:balloon:1.4.7"
+//Dagger
+    kapt "com.google.dagger:dagger-compiler:2.17"
+    implementation "com.google.dagger:dagger:2.28.3"
+
+    // Import the Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:31.0.3')
+
+    implementation 'com.google.firebase:firebase-messaging-ktx:23.1.1'
+
+}

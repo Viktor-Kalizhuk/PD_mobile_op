@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Questionnaire.StepOneFragment">
+
+    <LinearLayout
+        android:paddingTop="32dp"
+        android:paddingBottom="41dp"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. Личные данные"
+            android:textSize="24sp"
+            android:textColor="@color/text1"
+            android:fontFamily="@font/roboto"
+            android:textFontWeight="500"
+            android:lineHeight="32dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Last_name"
+            style="@style/YTextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/last_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/BG2"
+                android:gravity="start"
+                android:hint="Фамилия"
+                android:onClick="AllClick"
+                android:textCursorDrawable="@drawable/color_cursor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/First_name"
+            style="@style/YTextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/first_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/BG2"
+                android:gravity="start"
+                android:hint="Имя"
+                android:textCursorDrawable="@drawable/color_cursor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Middle_name"
+            style="@style/YTextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/middle_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/BG2"
+                android:gravity="start"
+                android:hint="Отчество"
+                android:textCursorDrawable="@drawable/color_cursor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Birthday"
+            style="@style/YTextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+               android:id="@+id/birthday"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/BG2"
+
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:drawableEnd="@drawable/carbon_calendar"
+                android:hint="Дата рождения"
+                android:textCursorDrawable="@drawable/color_cursor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/AutoCompleteTextView"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:hintTextColor="@color/text2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            >
+            <AutoCompleteTextView
+                android:backgroundTint="@color/BG2"
+                android:id="@+id/autoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto"
+                android:textFontWeight="400"
+                android:textSize="16sp"
+                android:textColor="@color/text1"
+                android:hint="Адрес регистрации"
+
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Email"
+            style="@style/YTextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/BG2"
+                android:gravity="start"
+                android:hint="Электронная почта(если есть)"
+                android:textCursorDrawable="@drawable/color_cursor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Согласен получать информационные данные по электронной почте"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/text1"
+                android:textFontWeight="400"
+                android:textSize="16sp"
+                android:lineHeight="24dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="44dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Укажите пол"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/text1"
+            android:textFontWeight="500"
+            android:textSize="16sp"
+            android:lineHeight="24dp"/>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/gender"
+            android:paddingLeft="18dp"
+            android:orientation="vertical">
+
+
+
+                <RadioButton
+                    android:id="@+id/fem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Женский"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="@color/text1"
+                    android:textFontWeight="400"
+                    android:textSize="16sp"
+                    android:lineHeight="24dp"/>
+
+
+                <RadioButton
+                    android:id="@+id/male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Мужской"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="@color/text1"
+                    android:textFontWeight="400"
+                    android:textSize="16sp"
+                    android:lineHeight="24dp"
+                    />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_marginTop="44dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Следуший шаг"
+            android:backgroundTint="@color/text1"
+            android:fontFamily="@font/roboto"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:textFontWeight="500"
+            android:lineHeight="20dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

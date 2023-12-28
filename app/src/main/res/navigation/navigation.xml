@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.antikolektor.Autarization.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start">
+        <action
+            android:id="@+id/action_startFragment_to_entryPhoneFragment"
+            app:destination="@id/entryPhoneFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_personalAreaFragment"
+            app:destination="@id/personalAreaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/entryPhoneFragment"
+        android:name="com.example.antikolektor.Autarization.EntryPhoneFragment"
+        android:label="fragment_entry_phone"
+        tools:layout="@layout/fragment_entry_phone">
+        <action
+            android:id="@+id/action_entryPhoneFragment_to_entryPaswordFragment"
+            app:destination="@id/entryPaswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/entryStorisFragment"
+        android:name="com.example.antikolektor.Autarization.EntryStorisFragment"
+        android:label="EntryStorisFragment">
+        <action
+            android:id="@+id/action_entryStorisFragment_to_startFragment"
+            app:destination="@id/startFragment" />
+        <action
+            android:id="@+id/action_entryStorisFragment_to_personalAreaFragment"
+            app:destination="@id/personalAreaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/entryPaswordFragment"
+        android:name="com.example.antikolektor.Autarization.EntryPaswordFragment"
+        android:label="fragment_entry_pasword"
+        tools:layout="@layout/fragment_entry_pasword">
+        <argument
+            android:name="code"
+            app:argType="string" />
+        <argument
+            android:name="phone"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_entryPaswordFragment_to_entrySMSFragment"
+            app:destination="@id/entrySMSFragment" />
+        <action
+            android:id="@+id/action_entryPaswordFragment_to_entryPhoneFragment"
+            app:destination="@id/entryPhoneFragment" />
+        <action
+            android:id="@+id/action_entryPaswordFragment_to_entryStorisFragment"
+            app:destination="@id/entryStorisFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/entrySMSFragment"
+        android:name="com.example.antikolektor.Autarization.EntrySMSFragment"
+        android:label="EntrySMSFragment">
+        <argument
+            android:name="code"
+            app:argType="string" />
+        <argument
+            android:name="phone"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_entrySMSFragment_to_entryStorisFragment"
+            app:destination="@id/entryStorisFragment" />
+        <action
+            android:id="@+id/action_entrySMSFragment_to_entryPaswordFragment"
+            app:destination="@id/entryPaswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/personalAreaFragment"
+        android:name="com.example.antikolektor.Main.PersonalAreaFragment"
+        android:label="fragment_personal_area"
+        tools:layout="@layout/fragment_personal_area">
+
+        <action
+            android:id="@+id/action_personalAreaFragment_to_goPaymentFragment"
+            app:destination="@id/goPaymentFragment" />
+        <action
+            android:id="@+id/action_personalAreaFragment_to_historyPaymentFragment"
+            app:destination="@id/historyPaymentFragment" />
+        <action
+            android:id="@+id/action_personalAreaFragment_to_myDocumentsFragment"
+            app:destination="@id/myDocumentsFragment" />
+        <action
+            android:id="@+id/action_personalAreaFragment_to_moreFragment"
+            app:destination="@id/moreFragment" />
+        <action
+            android:id="@+id/action_personalAreaFragment_to_shareDocumentFragment"
+            app:destination="@id/shareDocumentFragment" />
+        <action
+            android:id="@+id/action_personalAreaFragment_to_notificationFragment"
+            app:destination="@id/notificationFragment" />
+        <action
+            android:id="@+id/action_personalAreaFragment_to_questionnaireFragment"
+            app:destination="@id/questionnaireFragment" />
+        <action
+            android:id="@+id/action_personalAreaFragment_to_detailsStagesFragment"
+            app:destination="@id/detailsStagesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/goPaymentFragment"
+        android:name="com.example.antikolektor.Payment.GoPaymentFragment"
+        android:label="fragment_go_payment"
+        tools:layout="@layout/fragment_go_payment">
+        <action
+            android:id="@+id/action_goPaymentFragment_to_tinkoffPayFragment"
+            app:destination="@id/tinkoffPayFragment" />
+        <action
+            android:id="@+id/action_goPaymentFragment_to_personalAreaFragment"
+            app:destination="@id/personalAreaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyPaymentFragment"
+        android:name="com.example.antikolektor.Payment.HistoryPaymentFragment"
+        android:label="fragment_history_payment"
+        tools:layout="@layout/fragment_history_payment">
+        <action
+            android:id="@+id/action_historyPaymentFragment_to_personalAreaFragment"
+            app:destination="@id/personalAreaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myDocumentsFragment"
+        android:name="com.example.antikolektor.Documents.MyDocumentsFragment"
+        android:label="fragment_my_documents"
+        tools:layout="@layout/fragment_my_documents">
+        <action
+            android:id="@+id/action_myDocumentsFragment_to_personalDataFragment"
+            app:destination="@id/personalDataFragment" />
+        <action
+            android:id="@+id/action_myDocumentsFragment_to_personalAreaFragment"
+            app:destination="@id/personalAreaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/personalDataFragment"
+        android:name="com.example.antikolektor.Documents.MyDocumentsScreen.PersonalDataFragment"
+        android:label="fragment_personal_data"
+        tools:layout="@layout/fragment_personal_data" >
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_personalDataFragment_to_myDocumentsFragment"
+            app:destination="@id/myDocumentsFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/addPhotoFragment"
+        android:name="com.example.antikolektor.Documents.MyDocumentsScreen.AddPhotoFragment"
+        android:label="AddPhotoFragment">
+        <action
+            android:id="@+id/action_addPhotoFragment_to_myDocumentsFragment"
+            app:destination="@id/myDocumentsFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/moreFragment"
+        android:name="com.example.antikolektor.More.MoreFragment"
+        android:label="fragment_more"
+        tools:layout="@layout/fragment_more" >
+        <action
+            android:id="@+id/action_moreFragment_to_antiKolektorMainFragment"
+            app:destination="@id/antiKolektorMainFragment" />
+        <action
+            android:id="@+id/action_moreFragment_to_contactWithSpecialistFragment"
+            app:destination="@id/contactWithSpecialistFragment" />
+        <action
+            android:id="@+id/action_moreFragment_to_setingProfileMainFragment"
+            app:destination="@id/setingProfileMainFragment" />
+        <action
+            android:id="@+id/action_moreFragment_to_aboutTheApplicationFragment"
+            app:destination="@id/aboutTheApplicationFragment" />
+        <action
+            android:id="@+id/action_moreFragment_to_aboutCompany"
+            app:destination="@id/aboutCompany" />
+        <action
+            android:id="@+id/action_moreFragment_to_personalAreaFragment"
+            app:destination="@id/personalAreaFragment" />
+        <action
+            android:id="@+id/action_moreFragment_to_leaveFeedbackFragment"
+            app:destination="@id/leaveFeedbackFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/antiKolektorMainFragment"
+        android:name="com.example.antikolektor.More.AntiKolektor.AntiKolektorMainFragment"
+        android:label="fragment_anti_kolektor_main"
+        tools:layout="@layout/fragment_anti_kolektor_main" >
+        <action
+            android:id="@+id/action_antiKolektorMainFragment_to_contactFragment"
+            app:destination="@id/contactFragment" />
+        <action
+            android:id="@+id/action_antiKolektorMainFragment_to_logCallFragment"
+            app:destination="@id/logCallFragment" />
+        <action
+            android:id="@+id/action_antiKolektorMainFragment_to_moreFragment"
+            app:destination="@id/moreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactFragment"
+        android:name="com.example.antikolektor.More.AntiKolektor.ContactFragment"
+        android:label="fragment_contact"
+        tools:layout="@layout/fragment_contact" >
+        <action
+            android:id="@+id/action_contactFragment_to_antiKolektorMainFragment"
+            app:destination="@id/antiKolektorMainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/logCallFragment"
+        android:name="com.example.antikolektor.More.AntiKolektor.LogCallFragment"
+        android:label="fragment_log_call"
+        tools:layout="@layout/fragment_log_call" >
+        <action
+            android:id="@+id/action_logCallFragment_to_antiKolektorMainFragment"
+            app:destination="@id/antiKolektorMainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shareDocumentFragment"
+        android:name="com.example.antikolektor.Documents.ShareDocuments.ShareDocumentFragment"
+        android:label="fragment_share_document"
+        tools:layout="@layout/fragment_share_document" >
+        <action
+            android:id="@+id/action_shareDocumentFragment_to_personalAreaFragment"
+            app:destination="@id/personalAreaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactWithSpecialistFragment"
+        android:name="com.example.antikolektor.More.ContactWithSpecialist.ContactWithSpecialistFragment"
+        android:label="fragment_contact_with_specialist"
+        tools:layout="@layout/fragment_contact_with_specialist" >
+        <action
+            android:id="@+id/action_contactWithSpecialistFragment_to_moreFragment"
+            app:destination="@id/moreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/setingProfileMainFragment"
+        android:name="com.example.antikolektor.More.SetingProfile.SettingProfileMainFragment"
+        android:label="fragment_seting_profile_main"
+        tools:layout="@layout/fragment_seting_profile_main" >
+        <action
+            android:id="@+id/action_setingProfileMainFragment_to_myPhoneFragment"
+            app:destination="@id/myPhoneFragment" />
+        <action
+            android:id="@+id/action_setingProfileMainFragment_to_changePassword"
+            app:destination="@id/changePassword" />
+        <action
+            android:id="@+id/action_setingProfileMainFragment_to_moreFragment"
+            app:destination="@id/moreFragment" />
+        <action
+            android:id="@+id/action_setingProfileMainFragment_to_startFragment"
+            app:destination="@id/startFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myPhoneFragment"
+        android:name="com.example.antikolektor.More.SetingProfile.AddPhone.MyPhoneFragment"
+        android:label="fragment_my_phone"
+        tools:layout="@layout/fragment_my_phone" >
+        <action
+            android:id="@+id/action_myPhoneFragment_to_addPhoneFragment2"
+            app:destination="@id/addPhoneFragment2" />
+        <action
+            android:id="@+id/action_myPhoneFragment_to_setingProfileMainFragment"
+            app:destination="@id/setingProfileMainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPhoneFragment2"
+        android:name="com.example.antikolektor.More.SetingProfile.AddPhone.AddPhoneFragment"
+        android:label="fragment_add_phone"
+        tools:layout="@layout/fragment_add_phone" >
+        <action
+            android:id="@+id/action_addPhoneFragment2_to_getCodeFragment"
+            app:destination="@id/getCodeFragment" />
+        <action
+            android:id="@+id/action_addPhoneFragment2_to_myPhoneFragment"
+            app:destination="@id/myPhoneFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/getCodeFragment"
+        android:name="com.example.antikolektor.More.SetingProfile.AddPhone.GetCodeFragment"
+        android:label="GetCodeFragment" >
+        <argument
+            android:name="code"
+            app:argType="string" />
+        <argument
+            android:name="phone"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_getCodeFragment_to_myPhoneFragment"
+            app:destination="@id/myPhoneFragment" />
+        <action
+            android:id="@+id/action_getCodeFragment_to_addPhoneFragment2"
+            app:destination="@id/addPhoneFragment2" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/aboutTheApplicationFragment"
+        android:name="com.example.antikolektor.More.AboutTheApplication.AboutTheApplicationFragment"
+        android:label="fragment_about_the_application"
+        tools:layout="@layout/fragment_about_the_application" >
+        <action
+            android:id="@+id/action_aboutTheApplicationFragment_to_moreFragment"
+            app:destination="@id/moreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutCompany"
+        android:name="com.example.antikolektor.More.AboutCompany.AboutCompany"
+        android:label="fragment_about_company"
+        tools:layout="@layout/fragment_about_company" >
+        <action
+            android:id="@+id/action_aboutCompany_to_moreFragment"
+            app:destination="@id/moreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/changePassword"
+        android:name="com.example.antikolektor.More.SetingProfile.ChangePassword.ChangePasswordFragment"
+        android:label="fragment_change_password"
+        tools:layout="@layout/fragment_change_password" >
+        <action
+            android:id="@+id/action_changePassword_to_setingProfileMainFragment"
+            app:destination="@id/setingProfileMainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.example.antikolektor.Notification.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" >
+        <action
+            android:id="@+id/action_notificationFragment_to_personalAreaFragment"
+            app:destination="@id/personalAreaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/leaveFeedbackFragment"
+        android:name="com.example.antikolektor.More.Leave_feedback.LeaveFeedbackFragment"
+        android:label="fragment_leave_feedback"
+        tools:layout="@layout/fragment_leave_feedback" >
+        <action
+            android:id="@+id/action_leaveFeedbackFragment_to_moreFragment"
+            app:destination="@id/moreFragment" />
+        <action
+            android:id="@+id/action_leaveFeedbackFragment_to_personalAreaFragment"
+            app:destination="@id/personalAreaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionnaireFragment"
+        android:name="com.example.antikolektor.Questionnaire.QuestionnaireFragment"
+        android:label="fragment_questionnaire"
+        tools:layout="@layout/fragment_questionnaire" >
+        <action
+            android:id="@+id/action_questionnaireFragment_to_personalAreaFragment"
+            app:destination="@id/personalAreaFragment" />
+        <action
+            android:id="@+id/action_questionnaireFragment_to_addLenderFragment"
+            app:destination="@id/addLenderFragment" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/addLenderFragment"
+        android:name="com.example.antikolektor.Questionnaire.AddLenderFragment"
+        android:label="fragment_add_lender"
+        tools:layout="@layout/fragment_add_lender">
+        <argument
+            android:name="position"
+            app:argType="string" />
+
+        <argument
+            android:name="files"
+            app:argType="com.example.antikolektor.Bank" />
+
+
+        <action
+            android:id="@+id/action_addLenderFragment_to_questionnaireFragment"
+            app:destination="@id/questionnaireFragment" />
+        </fragment>
+    <fragment
+        android:id="@+id/tinkoffPayFragment"
+        android:name="com.example.antikolektor.Payment.TinkoffPayFragment"
+        android:label="fragment_tinkoff_pay"
+        tools:layout="@layout/fragment_tinkoff_pay" >
+        <argument
+            android:name="summa_pay"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_tinkoffPayFragment_to_goPaymentFragment"
+            app:destination="@id/goPaymentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsStagesFragment"
+        android:name="com.example.antikolektor.Main.DetailsStagesFragment"
+        android:label="fragment_details_stages"
+        tools:layout="@layout/fragment_details_stages" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_detailsStagesFragment_to_personalAreaFragment"
+            app:destination="@id/personalAreaFragment" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/addBlackListDialogFragment"
+        android:name="com.example.antikolektor.More.AntiKolektor.AddBlackListDialogFragment"
+        android:label="AddBlackListDialogFragment" />
+</navigation>

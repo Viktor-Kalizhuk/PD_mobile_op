@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "358994843195",
+    "project_id": "pravoedelolk-f4d75",
+    "storage_bucket": "pravoedelolk-f4d75.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:358994843195:android:a89f01f05c32b664ddae1e",
+        "android_client_info": {
+          "package_name": "com.example.antikolektor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "358994843195-phehrej6ld6a6vjjk9g4lam5tsje3rid.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyNyCMgAuO_ov0u1lsbyWCSIKFg_Ra28g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "358994843195-phehrej6ld6a6vjjk9g4lam5tsje3rid.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

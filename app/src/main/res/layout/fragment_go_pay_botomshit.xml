@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottomsheetdesign"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="23dp"
+    >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/drag_handle"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="@font/roboto"
+        android:lineHeight="24dp"
+        android:textAlignment="center"
+        android:text="Информация о данном этапе будет доступна  после оплаты и обработки  предыдущих этапов "
+        android:textColor="@color/black_custom"
+        android:textFontWeight="400"
+        android:textSize="16dp"/>
+
+<Button
+    android:id="@+id/ButtonPay"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Перейти к оплате"
+    android:backgroundTint="@color/text1"
+    android:textAllCaps="false"
+    android:textSize="14sp"
+    android:lineHeight="20dp"
+    android:textColor="@color/BG1"
+    android:fontFamily="@font/roboto_regular"
+    android:textFontWeight="500"
+    android:paddingBottom="12dp"
+    android:paddingTop="12dp"/>
+</LinearLayout>

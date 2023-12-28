@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Questionnaire.StepThreeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="32dp"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:paddingBottom="29dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:lineHeight="32dp"
+            android:text="3. Информация о кредитах"
+            android:textColor="@color/text1"
+            android:textFontWeight="500"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp"
+            android:textColor="@color/text1"
+            android:fontFamily="@font/roboto"
+            android:textFontWeight="400"
+            android:lineHeight="24dp"
+            android:text="Для начала работы защиты вас от кредиторов, нам достаточно первых двух шагов.
+Шаг 3 не обязателен для заполнения. Вы можете заполнить его по своему желанию." />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Завершить заполнение"
+            android:textAllCaps="false"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:backgroundTint="@color/text1"
+            android:fontFamily="@font/roboto"
+            android:textFontWeight="500"
+            android:textSize="14sp"
+            android:lineHeight="20dp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@color/BG3"
+
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="23dp"
+                android:layout_marginBottom="23dp"
+                android:textSize="14sp"
+                android:textColor="@color/text1"
+                android:fontFamily="@font/roboto"
+                android:textFontWeight="400"
+                android:lineHeight="20dp"
+                android:text="Нужна помощь в заполнении? Позвоните своему кредитному эксперту"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageView16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="23dp"
+                android:src="@drawable/illustration_doc"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/text1"
+            android:fontFamily="@font/roboto"
+            android:textFontWeight="400"
+            android:lineHeight="24dp"
+            android:layout_marginTop="134dp"
+            android:text="Для добавления кредитора нажмите “Добавить кредитора”. После внесения  кредитора нажмите “Сохранить”" />
+
+        <Button
+            android:id="@+id/button_add"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Добавить кредитора"
+            android:textAllCaps="false"
+            android:paddingTop="12dp"
+            android:textColor="@color/accent_blue"
+            android:paddingBottom="12dp"
+            android:fontFamily="@font/roboto"
+            android:textFontWeight="500"
+            android:textSize="14sp"
+            app:iconGravity="textStart"
+            app:icon="@drawable/icon"
+            app:iconTint="@color/accent_blue"
+            android:pointerIcon="arrow"
+            android:lineHeight="20dp"
+        />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RcView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

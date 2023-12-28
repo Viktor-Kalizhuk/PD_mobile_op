@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="16dp"
+android:background="@drawable/bottomsheetdesign"
+    android:paddingRight="16dp"
+    android:orientation="vertical"
+    tools:context=".More.AntiKolektor.InfoFragment">
+
+    <ImageView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/drag_handle"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        ></ImageView>
+
+    <LinearLayout
+        android:layout_marginTop="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="17dp"
+            android:src="@drawable/carbon_information"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:lineHeight="20dp"
+            android:text="Включите антиколлектор и защитите себя от нежелательных звонков"
+            android:textColor="@color/text1"
+            android:textFontWeight="400"
+            android:textSize="14sp"></TextView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="17dp"
+            android:src="@drawable/carbon_incognito"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:lineHeight="20dp"
+            android:text="При включенном Антиколлекторе входящие со скрытого номера-блокируются по умолчанию"
+            android:textColor="@color/text1"
+            android:textFontWeight="400"
+            android:textSize="14sp"></TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="17dp"
+            android:src="@drawable/carbon_edit"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:lineHeight="20dp"
+            android:text="Наша база данных коллекторов постоянно обновляется, но вы так же можете добавить любой номер телефона в черный список вручную"
+            android:textColor="@color/text1"
+            android:textFontWeight="400"
+            android:textSize="14sp"></TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="17dp"
+            android:src="@drawable/fluent_phone_checkmark_20_regular"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:lineHeight="20dp"
+            android:text="Укажите тип нежелательного звонка, чтобы мы могли его добавить в нашу базу блокировки коллекторов"
+            android:textColor="@color/text1"
+            android:textFontWeight="400"
+            android:textSize="14sp"></TextView>
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Понятно"
+        android:paddingBottom="12dp"
+        android:paddingTop="12dp"
+        android:backgroundTint="@color/BG2"
+        android:textColor="@color/text1"
+        android:layout_marginBottom="37dp"
+        android:stateListAnimator="@null"></Button>
+</LinearLayout>

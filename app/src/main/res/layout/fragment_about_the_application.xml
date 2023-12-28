@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".More.AboutTheApplication.AboutTheApplicationFragment">
+
+    <androidx.appcompat.widget.Toolbar
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp"
+        app:navigationIcon="@drawable/carbon_arrow_left"
+      >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:lineHeight="28dp"
+            android:text="О приложении"
+            android:textColor="@color/text1"
+            android:textFontWeight="500"
+            android:textSize="20dp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/log"
+        android:layout_gravity="center"
+        android:layout_marginTop="64dp"
+        >
+    </ImageView>
+
+    <TextView
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Версия"
+        android:fontFamily="@font/roboto"
+        android:textFontWeight="400"
+        android:textSize="12sp"
+        android:lineHeight="16dp"
+        android:textColor="@color/text3"
+        android:layout_gravity="center"
+       />
+    <TextView
+        android:background="?selectableItemBackground"
+        android:id="@+id/ButtonPolit"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Политика в отношении обработки персональных данных"
+        android:fontFamily="@font/roboto"
+        android:textSize="16sp"
+        android:textFontWeight="400"
+        android:lineHeight="24dp"
+        android:textColor="@color/text1"
+        android:paddingRight="30dp"
+        android:paddingLeft="16dp"
+        android:layout_marginTop="48dp"/>
+
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/BG2"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="16dp"/>
+
+    <TextView
+        android:background="?selectableItemBackground"
+        android:id="@+id/ButtonDogovor"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Договор оферты"
+        android:fontFamily="@font/roboto"
+        android:textSize="16sp"
+        android:textFontWeight="400"
+        android:lineHeight="24dp"
+        android:textColor="@color/text1"
+        android:paddingRight="30dp"
+        android:paddingLeft="16dp"
+
+        />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/BG2"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="16dp"/>
+
+    <TextView
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Оценить приложение"
+        android:fontFamily="@font/roboto"
+        android:textSize="16sp"
+        android:textFontWeight="400"
+        android:lineHeight="24dp"
+        android:textColor="@color/text1"
+        android:paddingRight="30dp"
+        android:paddingLeft="16dp"
+        />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/BG2"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="30dp"/>
+
+</LinearLayout>

@@ -1,0 +1,32 @@
+package com.example.app_spisho_dolgi.VPAdapter
+
+import android.content.res.Resources
+import androidx.fragment.app.*
+import androidx.lifecycle.Lifecycle
+import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.example.antikolektor.Documents.ShareDocuments.SharedIncomingDocumentFragment
+import com.example.antikolektor.Documents.ShareDocuments.SharedSentDocumentFragment
+import com.example.antikolektor.VpContent.ContentFragment1
+import com.example.antikolektor.VpContent.ContentFragment2
+import com.example.antikolektor.VpContent.ContentFragment3
+
+
+class VpAdapterShare(fragmentActivity: FragmentActivity) : FragmentStateAdapter(fragmentActivity) {
+    override fun getItemCount() = 2
+
+    override fun createFragment(position: Int): Fragment {
+        return when (position) {
+            0 -> {
+               SharedSentDocumentFragment()
+            }
+            1 -> {
+                SharedIncomingDocumentFragment()
+            }
+            else -> {
+                throw Resources.NotFoundException("Position Not Found")
+            }
+        }
+    }
+
+
+}

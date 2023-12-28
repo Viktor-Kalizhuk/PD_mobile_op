@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/mainItem"
+        android:icon="@drawable/home"
+        android:title="Главная"
+        android:orderInCategory="1"/>
+
+    <item android:id="@+id/questionnaireItem"
+        android:icon="@drawable/anceta"
+        android:title="Анкета"
+        android:orderInCategory="2"/>
+
+    <item android:id="@+id/paymentItem"
+        android:icon="@drawable/pay"
+        android:title="Оплата"
+        android:orderInCategory="3"/>
+    <item android:id="@+id/documentationItem"
+        android:icon="@drawable/doc"
+        android:title="Документы"
+        android:orderInCategory="4"/>
+    <item android:id="@+id/moreItem"
+        android:icon="@drawable/more"
+        android:title="Еще"
+        android:orderInCategory="5"/>
+
+</menu>
